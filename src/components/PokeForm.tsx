@@ -19,7 +19,7 @@ const AddPokemonForm = ({ type = "add", id }: addPokemonForm) => {
   const dispatch = useDispatch();
   const state = useSelector((state: any) => state.pokemons);
   //* Form States
-  const imageRef = useRef(null);
+  const imageRef = useRef(state[id!]?.image || null);
   const [isLoading, setIsLoading] = useState(false);
   const [pokemonData, setPokemonData] = useState<pokemonData>(
     type === "update" && state[id!]

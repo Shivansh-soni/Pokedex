@@ -1,5 +1,6 @@
 import Ash from "@/assets/Ash.png";
 import AddPokemonForm from "@/components/PokeForm";
+import Ball from "@/assets/pokeball.png";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { MdOutlineArrowBack } from "react-icons/md";
@@ -57,7 +58,7 @@ const PokeFinder = () => {
                         className='flex flex-col justify-center items-center gap-5 bg-primary p-5 cursor-pointer'
                       >
                         <img
-                          src={image}
+                          src={image ?? Ball}
                           alt='pokemon'
                           className=''
                           width={200}
