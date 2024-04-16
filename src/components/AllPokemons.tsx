@@ -55,7 +55,7 @@ const PokeFinder = () => {
                       <a
                         href={`/pokemon/${id}`}
                         key={id}
-                        className='flex flex-col justify-center items-center gap-5 bg-primary p-5 cursor-pointer transition-all hover:scale-105 ease-linear'
+                        className='flex flex-col justify-center items-center gap-5 bg-primary p-5 cursor-pointer transition-all hover:scale-105 ease-linear rounded-xl'
                       >
                         <img
                           src={image ?? Ball}
