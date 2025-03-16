@@ -5,6 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                npm i --legacy-peer-deps
+                npm run build
                 // Add build commands here
             }
         }
@@ -17,6 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+                systemctl restart nginx
                 // Add deployment commands here (e.g., copy files to Nginx directory)
             }
         }
