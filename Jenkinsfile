@@ -17,7 +17,7 @@ pipeline {
             steps {
                 // Install Node.js and npm dependencies
                 script {
-                    def nodeTool = tool name: "NodeJS ${NODE_VERSION}", type: 'NodeJSInstallation'
+                    def nodeTool = tool name: "Node23", type: 'NodeJSInstallation'
                     env.PATH = "${nodeTool}/bin:${env.PATH}"
                 }
                 sh 'npm install'
