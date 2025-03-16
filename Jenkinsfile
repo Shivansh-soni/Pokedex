@@ -33,10 +33,11 @@ pipeline {
 
         stage('Deploy') {
             steps {
+                sh "cp dist /var/www/html/pokedex/dist"
                 // Deploy the built application
                 // This could be an FTP command, cloud deployment CLI, etc.
                 // Example for deploying to Firebase:
-                sh 'firebase deploy --token $FIREBASE_TOKEN' // Make sure to set FIREBASE_TOKEN in Jenkins credentials
+                sh 'systemctl restart nginx' // Make sure to set FIREBASE_TOKEN in Jenkins credentials
             }
         }
     }
