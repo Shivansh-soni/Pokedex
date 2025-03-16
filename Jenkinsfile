@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from the repository
-                git url: 'https://your-repo-url.git', branch: 'main'
+                git url: 'https://github.com/Shivansh-soni/Pokedex.git', branch: 'devel'
             }
         }
 
