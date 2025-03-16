@@ -33,7 +33,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh "cp dist /var/www/html/pokedex/dist"
+                sh "cp dist /var/www/html/pokedex/dist -r"
                 // Deploy the built application
                 // This could be an FTP command, cloud deployment CLI, etc.
                 // Example for deploying to Firebase:
