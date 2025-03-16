@@ -37,7 +37,7 @@ pipeline {
                 // Deploy the built application
                 // This could be an FTP command, cloud deployment CLI, etc.
                 // Example for deploying to Firebase:
-                sh 'systemctl restart nginx' // Make sure to set FIREBASE_TOKEN in Jenkins credentials
+                sh 'sudo systemctl restart nginx' // Make sure to set FIREBASE_TOKEN in Jenkins credentials
             }
         }
     }
